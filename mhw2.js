@@ -25,7 +25,7 @@ for(const infoAggiuntiva of elementiConInfoAggiuntive){  //For Of: int informazi
 
 //Modifica Immagini mostrate a seguito all'interazione con un pulsante LO IMPLEMENTIAMO SOLAMENTE PER LA PRIMA VETRINA
 
-function changeImageSet(dot){   //da dot possiamo ottenere: la vetrina associata "dot.row" e il set di immagini associato "row.dataset.nESimo"
+function changeImageSet(dot){   //da dot possiamo ottenere: la vetrina associata "dot.row"; e il set di immagini associato "row.dataset.nESimo"
     let vetrina = vetrine[dot.row]; //inizialmente selezioniamo la vetrina a cui è associato il trio di pallini 
 
     let setImmagini = vetrina.getElementsByTagName('img');  //poi selezioniamo i tag che contengono le info sulle immagini
