@@ -25,7 +25,7 @@ for(const infoAggiuntiva of elementiConInfoAggiuntive){  //For Of: int informazi
 
 //Modifica Immagini mostrate a seguito all'interazione con un pulsante LO IMPLEMENTIAMO SOLAMENTE PER LA PRIMA VETRINA
 
-function changeImageSet(dot){   //da dot possiamo ottenere: la vetrina da lui associata dot.row e le immagini da lui associate row.dataset.nESimo
+function changeImageSet(dot){   //da dot possiamo ottenere: la vetrina associata "dot.row" e il set di immagini associato "row.dataset.nESimo"
     let vetrina = vetrine[dot.row]; //inizialmente selezioniamo la vetrina a cui è associato il trio di pallini 
 
     let setImmagini = vetrina.getElementsByTagName('img');  //poi selezioniamo i tag che contengono le info sulle immagini
@@ -80,9 +80,8 @@ function changeImageSet(dot){   //da dot possiamo ottenere: la vetrina da lui as
       } 
 }
 
-const vetrine = document.querySelectorAll('div.vetrina'); //creiamo una collezione con tutti  div con classe vetrina
+const vetrine = document.querySelectorAll('div.vetrina'); //selezioniamo tutti div con classe vetrina
 
-console.log(vetrine);
 
 function dotHasBeenSelected(event){
     for(const dot of dotFromFirtRow){
@@ -98,7 +97,7 @@ const firstRow = document.getElementById('row1');
 const dotFromFirtRow = firstRow.getElementsByTagName('div');
 for(const dot of dotFromFirtRow){
     dot.addEventListener("click", dotHasBeenSelected);
-    dot.row = 0;
+    dot.row = 0;    //associamo ai tre dot la vetrina di appartenenza
 }
 
 
